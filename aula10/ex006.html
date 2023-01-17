@@ -20,10 +20,17 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+    <div id="area">
         interaja....
     </div>
     <script>
+
+        var d = document.getElementById('area')
+        d.addEventListener('click', clicar)
+        d.addEventListener('mouseenter',entrou)
+        d.addEventListener('mouseout', saiu)
+
+
         function clicar()
         {
             var d = window.document.getElementById('area')
@@ -34,17 +41,17 @@
         function entrou()
         {
 
-            var e = document.getElementById('area')
-                e.style.backgroundColor = '#228122'
-                e.style.color = '#ffffff'
-                e.innerText = 'Entrou!'
+            var d = document.getElementById('area')
+                d.style.backgroundColor = '#228122'
+                d.style.color = '#ffffff'
+                d.innerText = 'Entrou!'
         }
 
         function saiu()
         {
-            var s = document.getElementById('area')
-            s.style.backgroundColor = '#228122'
-            s.innerText = 'Saiu!'
+            var d = document.getElementById('area')
+            d.style.backgroundColor = '#228122'
+            d.innerText = 'Saiu!'
 
 
         }
