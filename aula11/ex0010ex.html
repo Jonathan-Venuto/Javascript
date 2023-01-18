@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+    <style>
+        main > div#result
+        {
+            width: 200px;
+            height: 200px;
+
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <header> 
@@ -12,7 +21,38 @@
     </header>
     <main>
         Em qual país você mora?
-        <input type="text" name="" id="">
+        <input type="text" name="itext" id="pais">
+        <input type="button" value="Confirmar" onclick="mostrar()" required>
+        
+
+        <div id="resul">
+           
+        </div>
+
+        <script>
+            function mostrar()
+            {
+               var pdgit = document.getElementById('pais')
+               var resul = document.getElementById('resul')
+               var presul = (pais)
+               resul.innerText = `Sua nacionalidade é ${presul} `
+
+               if ( presul != 'brasil', 'Brasil')
+               {
+                resul.innerText = `Você é estrangeiro!`
+               }
+
+               else
+               {
+                resul.innerText = `Você é brasileiro!`
+               }
+
+               
+
+
+
+            }
+        </script>
     </main>
 </body>
 </html>
